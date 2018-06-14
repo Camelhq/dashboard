@@ -2,6 +2,7 @@ const User = require('../../models/User');
 const UserSession = require('../../models/UserSession');
 const jwt = require('jsonwebtoken');
 const CheckAuth = require('../../models/check-auth');
+const passport = require('passport')
 
 module.exports = (app) => {
 
@@ -225,7 +226,7 @@ module.exports = (app) => {
 
 
 
-  app.get('/api/dashboard', CheckAuth, (req, res, next) => {
+  app.get('/api/dashboard', passport.authenticate('jwt', { session: false }), (req, res, next) => {
 
     User.findById(req.UserData.userId)
     .select('-password')

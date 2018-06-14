@@ -1,5 +1,5 @@
 {
-  "name": "blktivity2",
+  "name": "dashboard",
   "version": "1.0.0",
   "description": "",
   "main": "postcss.config.js",
@@ -32,6 +32,8 @@
     "jsonwebtoken": "^8.2.2",
     "mongoose": "^5.0.11",
     "nodemon": "^1.17.2",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "postcss-loader": "^2.1.3",
     "react": "^16.4.0",
     "react-dom": "^16.2.0",
